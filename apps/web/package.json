@@ -9,6 +9,7 @@
     "lint": "eslint . --max-warnings 0"
   },
   "dependencies": {
+    "@prisma/client": "5.8.0",
     "@repo/ui": "workspace:*",
     "@tanstack/react-query": "4.35.3",
     "@trpc/client": "^10.45.0",
@@ -30,6 +31,7 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@mermaid-js/mermaid-cli": "^10.6.1",
     "@next/eslint-plugin-next": "^14.0.4",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
@@ -41,6 +43,7 @@
     "eslint": "^8.56.0",
     "postcss": "^8.4.33",
     "prisma": "^5.8.0",
+    "prisma-erd-generator": "^1.11.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   }
