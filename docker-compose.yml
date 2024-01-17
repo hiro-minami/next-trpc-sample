@@ -1,0 +1,31 @@
+version: "3"
+services:
+  db:
+    image: postgres:16.1
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: site-patrol
+    volumes:
+      - db-data:/var/lib/postgresql/data
+  storage:
+    image: fsouza/fake-gcs-server
+    tty: true
+    ports:
+      - 4443:4443
+    volumes:
+      - ./testdata/storage:/data
+      - ./.storage:/storage
+    command:
+      [
+        "-scheme",
+        "http",
+        "-port",
+        "4443",
+        "-external-url",
+        "http://localhost:4443",
+      ]
+volumes:
+  db-data:
