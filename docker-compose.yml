@@ -18,6 +18,7 @@ services:
     volumes:
       - ./testdata/storage:/data
       - ./.storage:/storage
+      - ./.storage:/storage/data/images
     command:
       [
         "-scheme",

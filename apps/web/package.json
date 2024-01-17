@@ -9,6 +9,7 @@
     "lint": "eslint . --max-warnings 0"
   },
   "dependencies": {
+    "@google-cloud/storage": "^7.7.0",
     "@prisma/client": "5.8.0",
     "@repo/ui": "workspace:*",
     "@tanstack/react-query": "4.35.3",

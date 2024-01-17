@@ -14,6 +14,10 @@ export const PageClientComponent = () => {
 
     const {  handleSubmit, register } = useForm<Inputs>();
 
+    const {data} = clientApi.getHtml.useQuery({url: htmlUrl ?? ""});
+    console.log(data)
+   
+
     const { mutate } = clientApi.fetcher.useMutation({
         onSuccess: ({body, url}) => {
             console.log("success")
